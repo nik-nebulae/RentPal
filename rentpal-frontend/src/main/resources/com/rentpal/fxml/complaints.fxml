@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.rentpal.controllers.complaints.ComplaintsController"
+            prefWidth="980" prefHeight="600"
+            styleClass="content-area">
+
+    <stylesheets>
+        <URL value="@/css/theme.css" />
+        <URL value="@/css/dashboard.css" />
+    </stylesheets>
+
+
+    <!-- 🟦 HEADER -->
+    <top>
+        <HBox spacing="10" styleClass="page-header">
+            <Label text="🛠 Complaints" styleClass="page-title"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button text="+ Add Complaint" styleClass="add-btn" onAction="#handleAddComplaint"/>
+        </HBox>
+    </top>
+
+    <!-- 🟩 CENTER -->
+    <center>
+        <VBox spacing="20" styleClass="main-content">
+            <HBox spacing="15" styleClass="filter-bar">
+                <TextField fx:id="searchField" promptText="Search by tenant or issue..." styleClass="search-field"/>
+                <ComboBox fx:id="filterComboBox" promptText="Filter by status" prefWidth="160"/>
+                <Pane HBox.hgrow="ALWAYS"/>
+            </HBox>
+
+            <!-- Complaints Table -->
+            <TableView fx:id="complaintsTable" prefHeight="420" styleClass="complaints-table">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="80"/>
+                    <TableColumn fx:id="colTenant" text="Tenant" prefWidth="200"/>
+                    <TableColumn fx:id="colIssue" text="Issue" prefWidth="300"/>
+                    <TableColumn fx:id="colStatus" text="Status" prefWidth="130"/>
+                    <TableColumn fx:id="colDate" text="Date Reported" prefWidth="160"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+</BorderPane>

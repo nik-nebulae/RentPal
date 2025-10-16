@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.rentpal.controllers.tenants.TenantsController"
+            prefWidth="980" prefHeight="600"
+            styleClass="content-area">
+
+    <!-- === PAGE STYLES === -->
+    <stylesheets>
+        <URL value="@/css/theme.css" />
+        <URL value="@/css/dashboard.css" />
+    </stylesheets>
+
+    <!-- === HEADER === -->
+    <top>
+        <HBox spacing="10" styleClass="page-header">
+            <Label text="👥 Tenants" styleClass="page-title"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button text="+ Add Tenant" styleClass="add-btn" onAction="#handleAddTenant"/>
+        </HBox>
+    </top>
+
+    <!-- === MAIN CONTENT === -->
+    <center>
+        <VBox spacing="30" alignment="TOP_CENTER" styleClass="main-content">
+
+            <!-- ==== STAT CARDS ==== -->
+            <HBox spacing="30" alignment="CENTER" styleClass="stats-row" HBox.hgrow="ALWAYS">
+                <VBox styleClass="stat-card">
+                    <Label text="Total Tenants" styleClass="stat-title"/>
+                    <Label fx:id="totalTenants" text="0" styleClass="stat-value"/>
+                </VBox>
+
+                <VBox styleClass="stat-card">
+                    <Label text="Active Tenants (Paid)" styleClass="stat-title"/>
+                    <Label fx:id="activeTenants" text="0" styleClass="stat-value"/>
+                </VBox>
+
+                <VBox styleClass="stat-card">
+                    <Label text="Pending Payments" styleClass="stat-title"/>
+                    <Label fx:id="pendingPayments" text="0" styleClass="stat-value"/>
+                </VBox>
+
+                <VBox styleClass="stat-card">
+                    <Label text="Vacant Units" styleClass="stat-title"/>
+                    <Label fx:id="vacantUnits" text="0" styleClass="stat-value"/>
+                </VBox>
+            </HBox>
+
+            <!-- ==== SEARCH + FILTER ==== -->
+            <HBox spacing="15" styleClass="filter-bar">
+                <TextField fx:id="searchField" promptText="Search tenant by name..." styleClass="search-field"/>
+                <ComboBox fx:id="filterComboBox" promptText="Filter by status" prefWidth="160"/>
+                <Pane HBox.hgrow="ALWAYS"/>
+            </HBox>
+
+            <!-- ==== TENANTS TABLE ==== -->
+            <TableView fx:id="tenantsTable" prefHeight="400">
+                <columns>
+                    <TableColumn fx:id="colName" text="Tenant Name" prefWidth="200"/>
+                    <TableColumn fx:id="colUnit" text="Unit" prefWidth="130"/>
+                    <TableColumn fx:id="colContact" text="Contact" prefWidth="180"/>
+                    <TableColumn fx:id="colRentDue" text="Rent Due ($)" prefWidth="150"/>
+                    <TableColumn fx:id="colStatus" text="Status" prefWidth="130"/>
+                </columns>
+            </TableView>
+
+        </VBox>
+    </center>
+
+</BorderPane>

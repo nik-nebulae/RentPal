@@ -1,0 +1,143 @@
+/* ---------- Page Background ---------- */
+.root {
+    -fx-background-color: linear-gradient(to bottom right,
+    #e3f2fd 0%,
+    #d0e7ff 50%,
+    #b3d5ff 100%);
+
+    /* Add a subtle radial glow effect */
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+
+/* ---------- Floating Login Box ---------- */
+#loginBox {
+    -fx-alignment: center;
+    -fx-padding: 50 60 50 60;                 /* Inner spacing: top, right, bottom, left */
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 20;
+    -fx-border-color: rgba(0,0,0,0.15);
+    -fx-border-radius: 20;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 25, 0, 0, 10);
+
+    /* 🔑 Adjust box size here */
+    -fx-pref-width: 420px;                   /* Increase width */
+    -fx-pref-height: 480px;                  /* Increase height */
+    -fx-max-width: 420px;                     /* Prevents it from going too wide */
+    -fx-max-height: 480px;
+
+    -fx-spacing: 25;                          /* Space between elements inside the box */
+}
+
+
+
+/* ---------- Title ---------- */
+.label-title {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #263238;
+    -fx-padding: 0 0 15 0;                          /* Extra bottom space below title */
+}
+
+/* ---------- Input Fields ---------- */
+.text-field, .password-field {
+    -fx-pref-width: 100%;                            /* Will fill the login box width */
+    -fx-max-width: 320px;                             /* Limit input field width */
+    -fx-pref-height: 44px;
+    -fx-background-radius: 10px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #b0bec5;
+    -fx-border-radius: 10px;
+    -fx-padding: 0 12 0 12;
+    -fx-font-size: 15px;
+}
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #42a5f5;
+    -fx-border-width: 2px;
+}
+
+/* ---------- Button ---------- */
+.button {
+    -fx-max-width: 320px;                            /* Button stays same width as fields */
+    -fx-pref-height: 44px;
+    -fx-background-color: linear-gradient(to right, #42a5f5, #1e88e5);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+}
+.button:hover {
+    -fx-background-color: linear-gradient(to right, #1e88e5, #1565c0);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-cursor: hand;
+}
+
+/* ---------- Hyperlinks ---------- */
+.hyperlink {
+    -fx-text-fill: #1565c0;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+}
+.hyperlink:hover {
+    -fx-text-fill: #0d47a1;
+    -fx-underline: true;
+}
+.text-field, .password-field, .button {
+    -fx-pref-width: 320px;                   /* wider inputs inside the box */
+    -fx-pref-height: 48px;
+    -fx-background-radius: 10;
+    -fx-font-size: 15px;
+}
+/* Logo image at the top */
+.image-view {
+    -fx-padding: 0 0 15 0;
+}
+
+/* Subtitle under logo */
+.label-subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #546e7a;
+    -fx-padding: 0 0 10 0;
+}
+
+/* Title stays bold and bigger */
+.label-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #263238;
+    -fx-padding: 0 0 15 0;
+}
+.label-footer {
+    -fx-font-size: 12px;
+    -fx-text-fill: #90a4ae;
+    -fx-padding: 15 0 0 0;
+}
+#signupBox {
+    -fx-pref-width: 420px;
+    -fx-pref-height: 520px;
+    -fx-max-width: 420px;
+    -fx-max-height: 520px;
+
+    -fx-alignment: center;
+    -fx-spacing: 25;
+    -fx-padding: 50 60 50 60;
+
+    -fx-background-color: rgba(255,255,255,0.95);
+    -fx-background-radius: 20;
+    -fx-border-color: rgba(0,0,0,0.1);
+    -fx-border-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 25, 0, 0, 10);
+}
+
+
+.label-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #263238;
+    -fx-padding: 0 0 15 0;
+}
+
