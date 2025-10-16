@@ -1,0 +1,13 @@
+/Users/tech_nebulae/IdeaProjects/rentpal-frontend/src/main/java/com/rentpal/Main.java
+/Users/tech_nebulae/IdeaProjects/rentpal-frontend/src/main/java/com/rentpal/controllers/auth/LoginController.java
+/Users/tech_nebulae/IdeaProjects/rentpal-frontend/src/main/java/com/rentpal/controllers/auth/SignupController.java
+/Users/tech_nebulae/IdeaProjects/rentpal-frontend/src/main/java/com/rentpal/controllers/complaints/Complaint.java
+/Users/tech_nebulae/IdeaProjects/rentpal-frontend/src/main/java/com/rentpal/controllers/complaints/ComplaintsController.java
+/Users/tech_nebulae/IdeaProjects/rentpal-frontend/src/main/java/com/rentpal/controllers/dashboard/DashboardHomeController.java
+/Users/tech_nebulae/IdeaProjects/rentpal-frontend/src/main/java/com/rentpal/controllers/dashboard/OwnerDashboardController.java
+/Users/tech_nebulae/IdeaProjects/rentpal-frontend/src/main/java/com/rentpal/controllers/payments/AddPaymentController.java
+/Users/tech_nebulae/IdeaProjects/rentpal-frontend/src/main/java/com/rentpal/controllers/payments/Payment.java
+/Users/tech_nebulae/IdeaProjects/rentpal-frontend/src/main/java/com/rentpal/controllers/payments/PaymentsController.java
+/Users/tech_nebulae/IdeaProjects/rentpal-frontend/src/main/java/com/rentpal/controllers/tenants/Tenant.java
+/Users/tech_nebulae/IdeaProjects/rentpal-frontend/src/main/java/com/rentpal/controllers/tenants/TenantsController.java
+/Users/tech_nebulae/IdeaProjects/rentpal-frontend/src/main/java/com/rentpal/utils/SceneSwitcher.java
