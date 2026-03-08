@@ -1,86 +1,63 @@
-RentPal – Rental Management System
+🏠 RentPal
+Smart Rental Management System
 
-RentPal is a full-stack rental management system designed to streamline rent tracking and complaint management between property owners and tenants.
-The system is built using JavaFX (frontend), Spring Boot (backend), and MySQL (database).
+A full-stack rental management platform built with JavaFX, Spring Boot, and MySQL to simplify rent tracking and complaint handling for property owners and tenants.
 
-Overview
+✨ What RentPal Solves
 
-RentPal provides a structured platform where:
+Managing rental properties manually leads to:
 
-Tenants can view and manage their rent payments
+Missed rent tracking
 
-Owners can monitor tenant payment status
+Poor complaint visibility
 
-Complaints can be submitted and tracked efficiently
+No structured payment history
 
-The system follows a layered architecture and REST-based communication between frontend and backend components.
+RentPal centralizes everything into one system.
 
-Key Features
-Authentication & Role Management
+🚀 Core Features
 
-Secure login system
+🔐 Role-Based Authentication
+Separate dashboards for Owners and Tenants.
 
-Role-based access (Owner / Tenant)
+💰 Payment Tracking System
 
-Payment Management
+Record payments
 
-Record rent payments
-
-Track payment status (Full / Partial / Overdue)
+Track Full / Partial / Overdue status
 
 View payment history
 
-Complaint Management
+🛠 Complaint Management
 
-Submit complaints (Tenant)
+Tenants can raise complaints
 
-View and update complaint status (Owner)
+Owners can update status
 
-Status tracking (Open / In Progress / Resolved)
+Track resolution progress
 
-Technology Stack
+🏗 System Architecture
+JavaFX UI  →  REST APIs  →  Spring Boot  →  MySQL
 
-Frontend
+Architecture Pattern: Layered (Controller → Service → Repository)
 
-JavaFX
+This ensures:
 
-FXML
+Clean separation of concerns
 
-JavaFX CSS
+Scalable backend design
 
-Backend
+Maintainable codebase
 
-Spring Boot
+🛠 Tech Stack
+Layer	Technology
+Frontend	JavaFX (FXML + CSS)
+Backend	Spring Boot (REST APIs)
+Database	MySQL
+ORM / Access	JDBC / Spring Data JPA
+Build Tool	Maven
+🗄 Database Schema
 
-Spring Web (REST APIs)
-
-Spring Data JPA / JDBC
-
-Maven
-
-Database
-
-MySQL
-
-MySQL Connector/J
-
-System Architecture
-JavaFX Frontend
-        ↓ REST API
-Spring Boot Backend
-(Controller → Service → Repository)
-        ↓ JDBC
-MySQL Database
-
-The architecture follows a standard three-layer design:
-
-Controller Layer – Handles HTTP requests
-
-Service Layer – Business logic
-
-Repository Layer – Database interaction
-
-Database Design
 Users
 
 id
@@ -101,7 +78,7 @@ amount
 
 payment_date
 
-status (FULL / PARTIAL / OVERDUE)
+status
 
 Complaints
 
@@ -111,66 +88,30 @@ tenant_id
 
 description
 
-status (OPEN / IN_PROGRESS / RESOLVED)
+status
 
-Setup & Installation
-Prerequisites
+⚙️ How to Run
+1️⃣ Backend
 
-Java 17+
+Configure MySQL database rentpal
 
-Maven
+Update application.properties
 
-MySQL Server
-
-JavaFX SDK
-
-Backend Setup
-
-Clone the repository
-
-Create a MySQL database named rentpal
-
-Configure application.properties:
-
-spring.datasource.url=jdbc:mysql://localhost:3306/rentpal
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-
-Run the backend:
+Run:
 
 mvn spring-boot:run
-Frontend Setup
+2️⃣ Frontend
 
-Open the JavaFX project
+Open JavaFX project
 
-Configure backend base URL (if required)
+Run main application class
 
-Run the main JavaFX application class
+📌 Future Roadmap
 
-Project Structure
-rentpal/
-│
-├── backend/
-│   ├── controller/
-│   ├── service/
-│   ├── repository/
-│   ├── model/
-│   └── config/
-│
-├── frontend/
-│   ├── fxml/
-│   ├── controller/
-│   └── css/
-│
-└── database/
-Future Enhancements
+Automated payment reminders
 
-Automated payment reminder system
+Email notifications
 
-Email/SMS notifications
-
-Admin dashboard
+Admin panel
 
 Cloud deployment
-
-Docker containerization
